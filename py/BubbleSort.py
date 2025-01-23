@@ -18,5 +18,13 @@ def bubble_sort(arr):
         """
         arr[i], arr[j] = arr[j], arr[i]
 
-    # TODO: Implement the bubble sort algorithm below.
-    pass
+    n = len(arr)
+    # Outer loop for each pass through the list
+    for i in range(n - 1):
+        # Inner loop for comparisons in the current pass
+        for j in range(n - i - 1):
+            # Swap if elements are in the wrong order
+            if arr[j] > arr[j + 1]:
+                swap(j, j + 1)
+    return arr
+
